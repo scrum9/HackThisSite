@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical centering for .text */
+  align-items: center; /* Horizontal centering for .text */
+  position: relative; /* Allows .navbar to be positioned at the top */
+}
+
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 20px;
+  position: absolute; /* Take the navbar out of the normal flow */
+  top: 0; /* Position it at the top of the page */
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links on the right */
+  gap: 20px; /* Add some spacing between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.text {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.753);
+  padding: 2%;
+}
+
+.titletext {
+  justify-content: center;
+  text-align: center;
+  margin-top: 100px; /* Add space below the navbar */
+  color: white;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Adjust text size for smaller screens */
+    padding: 8px;
+  }
+
+  .titletext {
+    margin-top: 60px; /* Adjust margin-top for smaller screens */
+    font-size: 20px;
+  }
+}
