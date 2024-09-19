@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* Allows .navbar to be positioned at the top */
+}
+
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding: 20px;
+  position: absolute; /* Take the navbar out of the normal flow */
+  top: 0; /* Position it at the top of the page */
+  left: 0;
+  min-height: 60px; /* Ensure navbar has enough height */
+  z-index: 1000; /* Ensure it stays above the rest */
+ 
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links on the right */
+  gap: 20px; /* Add some spacing between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.text {
+  color: red;
+  text-align: center;
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.753);
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.titletext {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Position it in the middle vertically without going under the navbar */
+  left: 50%; /* Position it in the middle horizontally */
+  transform: translate(-50%, -50%); /* Center it exactly */
+}
+.test2{
+  width: 50%;
+}
+.test3{
+  width: 50%;
+}
+.test3 img{
+  width: 50%;
+}
+.test2 h2{
+  margin-bottom: 10px;
+ font-size: 30px;
+ text-align: start;
+ color: black;
+}
+.test2 p{
+  font-size: 25px;
+  color: black;
+}
+.ourServices{
+  text-align: center;
+  margin-top: 80px;
+  font-size: 20px;
+  margin-bottom: 4%;
+
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.elevator{
+  margin-top: 20vh;
+}
+h3{
+  font-size: 30px;
+}
+.right p{
+font-size: 20px;
+}
+.left p{
+  font-size: 20px;
+  }
+.footer{
+  background-color: #457B9D;
+  width: 100%;
+  height: 25vh;
+  margin-top: 20vh;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: flex-end;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Adjust text size for smaller screens */
+    padding: 8px;
+  }
+
+  .titletext {
+    font-size: 30px; /* Adjust font size for smaller screens */
+  }
+}
